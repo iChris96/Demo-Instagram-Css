@@ -1,0 +1,37 @@
+*{
+  margin: auto;
+  background-color: rgb(233, 233, 233);
+}
+
+.jamonsito{
+  color: red;
+}
+
+.controls{
+  text-align: center;
+  margin-left: 50%;
+  margin-right: 100%;
+}
+
+.photo{
+  display: block;
+  width: 600px;
+  height: 300px;
+  /*filter: blur(10px);*/
+}
+
+._1977{
+  filter: sepia(.5) hue-rotate(-30deg) saturate(1.4);
+}
+
+.inkwell{
+  filter: brightness(1.25) contrast(.85) grayscale(1);
+}
+
+.clarendon {
+  filter: sepia(.15) contrast(1.25) brightness(1.25) hue-rotate(5deg);
+}
+
+.poprocket{
+    filter: sepia(.15) brightness(1.2);
+}

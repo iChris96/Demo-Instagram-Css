@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <title></title>
+  </head>
+  <body>
+
+    <img class="photo _1977" src="bosque.jpg" alt="">
+
+    <div class= "controls">
+
+    <label for="blur">Blur:</label>
+    <input type="range" class="blur" min="0" max="10" step="0.1" value="2.0" name="blur" />
+    <label for="brightness">Brightness:</label>
+    <input type="range" class="brightness" min="0" max="500" step="0.1" value="100" name="brightness" />
+    <label for="constrast">Constrast:</label>
+    <input type="range" class="constrast" min="0" max="500" step="0.1" value="100" name="constrast" />
+    <label for="dropshadow">Dropshadow:</label>
+    <input type="range" class="dropshadow" min="0" max="50" step="0.1" value="0" name="dropshadow" />
+    <label for="grayscale">Grayscale:</label>
+    <input type="range" class="grayscale" min="0" max="100" step="0.1" value="0" name="grayscale" />
+    <label for="huerotate">Hue-rotate:</label>
+    <input type="range" class="huerotate" min="0" max="360" step="0.1" value="0" name="huerotate" />
+    <label for="saturate">Saturate:</label>
+    <input type="range" class="saturate" min="0" max="500" step="0.1" value="100" name="saturate" />
+    <label for="sepia">Sepia:</label>
+    <input type="range" class="sepia" min="0" max="500" step="0.1" value="100" name="sepia" />
+
+    </div>
+
+
+    <script type="text/javascript">
+      var form = document.querySelector(".photo");
+      var blur = document.querySelector(".blur");
+      var brightness = document.querySelector(".brightness");
+      var constrast = document.querySelector(".constrast");
+      var dropshadow = document.querySelector(".dropshadow");
+      var grayscale = document.querySelector(".grayscale");
+      var huerotate = document.querySelector(".huerotate");
+      var saturate = document.querySelector(".saturate");
+      var sepia = document.querySelector(".sepia");
+
+      blur.addEventListener("input", function() {
+      form.style.filter = "blur(" + this.value + "px)";
+      });
+
+      brightness.addEventListener("input", function() {
+      form.style.filter = "brightness(" + this.value + "%)";
+      });
+
+      constrast.addEventListener("input", function() {
+      form.style.filter = "contrast(" + this.value + "%)";
+      });
+
+      dropshadow.addEventListener("input", function() {
+      form.style.filter = "drop-shadow(" + this.value + "px " + this.value + "px 30px black)";
+      });
+
+      grayscale.addEventListener("input", function() {
+      form.style.filter = "grayscale(" + this.value + "%)";
+      });
+
+      huerotate.addEventListener("input", function() {
+      form.style.filter = "hue-rotate(" + this.value + "deg)";
+      });
+
+      saturate.addEventListener("input", function() {
+      form.style.filter = "saturate(" + this.value + "%)";
+      });
+
+      sepia.addEventListener("input", function() {
+      form.style.filter = "sepia(" + this.value + "%)";
+      });
+
+    </script>
+
+  </body>
+</html>
